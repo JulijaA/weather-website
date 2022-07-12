@@ -6,40 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/9c567cab71.js" crossorigin="anonymous"></script>
-    <title>Weather Website</title>
+    <script src="https://kit.fontawesome.com/afd77654a9.js" crossorigin="anonymous"></script>
+    <title>Weather Website</title>  
 </head>
 
 <body>
-        
-    <div class="current-info">
-            <div class="myDiv">
-                <div class="img-temp">
-                    <div class="w-icon" id="icon"></div>
-                    <div class="temp" id="temp"> <span id="celsius">&#8451;</span></div>
+    <div class="container">
+        <div class="wrapper">
+            <div id="dynamicImg"></div>
+            <div class="current-info">
+                <div class="weather-info">
+                    <div class="img-temp">
+                        <div id="temp"></div>
+                    </div>
+                    <div id="description"></div>
+                    <div class="time-date">
+                        <div id="country"></div>
+                        <div id="current-date"></div>
+                        <div id="current-time"><span id="am-pm"></span></div>
+                    </div>
                 </div>
-                <div class="time-date">
-                    <div class="current-date" id="current-date"></div>
-                    <div class="current-time" id="current-time"><span id="am-pm"></span></div>
-                    <div class="country" id="country"></div>
-                </div>
+            
             </div>
-            <div class="others" id="current-weather-items"></div>
+        <div class="current-weather-items" id="current-weather-items"></div>
         </div>
-    
 
+<!-- ======= Code for future forecast ============
+    
     <div class="future-forecast">
-    
         <div class="weather-forecast" id="weather-forecast"> 
-    
         </div>
+    </div> 
+-->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-
-
 </body>
 
 </html>
