@@ -1,6 +1,6 @@
 # weather-website
 
-A weather website with current forecast that includes temterature in celsious, location, date, time, himudity, pressure, wind, sunrise and sunset
+A weather website with current forecast that includes temterature in celsious, location, date, time, humidity, pressure, wind, sunrise and sunset
 
 The website also changes the images in the widget based on the current weather
 
