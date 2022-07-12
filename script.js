@@ -36,10 +36,10 @@ setInterval(() => {
 
     timeEl.innerHTML = hoursIn12HrFormat + `:` + (minutes < 10 ? '0' + minutes : minutes) + ' ' + `<span id="am-pm">${ampm}</span>`;
     dateEl.innerHTML = days[day] + ", " + date + ' ' + months[month];
-    getWeatherData();
+
 }, 1000);
 
-
+getWeatherData();
 function getWeatherData() {
     navigator.geolocation.getCurrentPosition((success) => {
         let { latitude, longitude } = success.coords;
@@ -52,16 +52,16 @@ function getWeatherData() {
 }
 
 function showWeatherData(data) {
-    let { humidity, pressure, sunrise, sunset, wind_speed, temp} = data.current;
+    let { humidity, pressure, sunrise, sunset, wind_speed, temp } = data.current;
     let { main } = data.current.weather[0];
     let { icon } = data.current.weather[0];
-    let { description} = data.current.weather[0];
+    let { description } = data.current.weather[0];
 
-    function dynamicBackground () {
-        for(const key in imagesForWeather) {
-            if(key === main) {
-            dynamicImg.innerHTML = 
-            `
+    function dynamicBackground() {
+        for (const key in imagesForWeather) {
+            if (key === main) {
+                dynamicImg.innerHTML =
+                    `
             <img src="${imagesForWeather[key]}" width='100%';> 
             `;
             }
@@ -100,14 +100,14 @@ function showWeatherData(data) {
         </div>
     `;
 
-       dynamicBackground();
+    dynamicBackground();
 
     // =============== Code for showing the forecast for 7 days ===================================
 
     // let otherDayForcast = '';
     // data.daily.forEach((day, idx) => {
     //     if(idx == 0){
-            
+
     //     }else {
     //         otherDayForcast += `
     //         <div class="weather-forecast-item">
@@ -115,7 +115,7 @@ function showWeatherData(data) {
     //             <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
     //             <div class="temp">${Math.floor(day.temp.day)}&#176;C</div>
     //         </div>
-            
+
     //         `
     //     }
     // })
